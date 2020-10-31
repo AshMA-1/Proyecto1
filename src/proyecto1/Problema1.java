@@ -6,7 +6,7 @@
 package proyecto1;
 
 import java.util.Scanner;
-
+//hacer primer ajuste
 /**
  *
  * @author ashle
