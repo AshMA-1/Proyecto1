@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author ashle
  */
-public class FigurasGeo {
+public class Problema6 {
 
     /**
      * @param args the command line arguments
