@@ -12,8 +12,7 @@ package proyecto1;
 import java.util.Scanner;
 
 public class Problema3 {
-public static void main(String[] args) {
-}
+
     /**
      * @param the args command line arguments
      */
@@ -70,7 +69,8 @@ public static void main(String[] args) {
         }
 
     }
-
+public static void main(String[] args) {
+}
     
 }
 
