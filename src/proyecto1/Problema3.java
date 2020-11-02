@@ -12,40 +12,66 @@ package proyecto1;
 import java.util.Scanner;
 
 public class Problema3 {
-
+public static void main(String[] args) {
+}
     /**
-     * @param args the command line arguments
+     * @param the args command line arguments
      */
-    public static void main(String[] args, int IR) {
+    public void calcularImpuesto(int numDependientes, double salario){
         // TODO code application logic here
-        int salario = 0;
-        int[] arreglo = new int[5];
-        Scanner ent = new Scanner(System.in);
+        Scanner calcular = new Scanner(System.in);
+        double arreglo[] = {0, 1, 2, 3, 4};
+        double a = 0,b = 0,c = 0,d = 0,e = 0;
+        int valor = 0;
+        int ingreso;
         
+        arreglo[0] = 1;
+        arreglo[1] = 0.9;
+        arreglo[2] = 0.7;
+        arreglo[3] = 0.6;
+        arreglo[4] = 0.4;
         
-        arreglo[0] = 200000;
-        arreglo[1] = 400000;
-        arreglo[2] = 600000;
-        arreglo[3] = 800000;
-        arreglo[4] = 800000;
+        System.out.println("Presione el salario aproximado:\n 1) Salario menor a 200.000\n 2)Salario igual a 200.000 y menor a 400.000\n 3) Salario igual a 400.000 y menor a 600.000\n 4) Salario igual a 600.000 y menor a 800.000\n 5) Salario mayor o igual a 800.000\n");
+        salario = calcular.nextInt();
         
-        for (int i = 0; i < 6; i++) {
+        System.out.println("Ingrese aquí su salario: ");
+        ingreso = calcular.nextInt();
 
-            System.out.println("Ingrese su salario: "+ i);
-            arreglo[i] = ent.nextInt();
-            salario += arreglo[i];
+        switch (valor) {
+            case 1:
+                a = salario * arreglo[0];
+                //CUADRADO
+                System.out.println("El Impuesto de Renta a pagar es: " + a);
+                break;
 
+            case 2:
+                b = salario * arreglo[1];
+                //TRIANGULO
+                System.out.println("El Impuesto de Renta a pagar es: " + b);
+                break;
+
+            case 3:
+                c = salario * arreglo[2];
+                //TRIANGULO
+                System.out.println("El Impuesto de Renta a pagar es: " + c);
+                break;
+
+            case 4:
+                d = salario * arreglo[3];
+                //TRIANGULO
+                System.out.println("El Impuesto de Renta a pagar es: " + d);
+                break;
+
+            case 5:
+                e = salario * arreglo[4];
+                //TRIANGULO
+                System.out.println("El Impuesto de Renta a pagar es: " + e);
+                break;
         }
-        for (int i = 0; i < 6; i++) {
 
-            System.out.println("En la posicion " + (i + 1) + " se guardo: " + arreglo[i]);
-        }
-        
-         if(salario < 200000){
-            System.out.println("El monto que debe pagar es el 0%: "+arreglo[0]);
-            }else if (200000 < 4000000){
-    }        
-   }         
-   }
+    }
+
+    
+}
 
 
