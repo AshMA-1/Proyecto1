@@ -13,18 +13,26 @@ import java.util.Scanner;
  */
 public class Problema5 {
     
-static Scanner entrada = new Scanner(System.in);
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         // TODO code application logic here
-        int decimal, digito;
+        Scanner entrada = new Scanner(System.in);
+        double num=3.0, valor;
+        int valorPI=0;
         
-        System.out.print("Favor ingreasr la cantidad");
-        int cantidad = entrada.nextInt();
+        System.out.println("Desea estimar el valor de PI:\n 1) 1\n 2) 0");
+
+        valorPI = entrada.nextInt();
         
+        
+        switch (valorPI) {
+            case 1:
+                valor = 4-(4/num);
+                //CUADRADO
+                System.out.println("El valor de PI es: " + valor);
+                break;
+             
+         }
      
-    }
-    
-}
+     }
+     }
+
