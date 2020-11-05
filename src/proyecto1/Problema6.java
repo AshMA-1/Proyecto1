@@ -18,10 +18,13 @@ public class Problema6 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
+        //Para que el usuario digite 
         Scanner calcular = new Scanner(System.in);
 
-        int x = 0, y = 0, cuadrado, triangulo, rectangulo, circulo, area = 0;
+        //inicialidar variables 
+        int x = 0, y = 0, cuadrado, triangulo, rectangulo, area = 0;
+        float circulo;
         double pi = 3.14;
 
         System.out.println("Qué opción desea hacer:\n 1) Cuadrado\n 2) Triangulo\n 3) Rectangulo\n 4) Circulo\n");
@@ -33,6 +36,7 @@ public class Problema6 {
         System.out.println("Favor ingrese el segundo dígito: ");
         y = calcular.nextInt();
 
+        //creacion de switch y agregando formulas de cada figura geometrica 
         switch (area) {
             case 1:
                 cuadrado = x * x;
@@ -50,12 +54,15 @@ public class Problema6 {
                 rectangulo = (x * y);
                 //RECTÁNGULO 
                 System.out.println("El área del rectángulo es: " + rectangulo);
+                break;
 
             case 4:
                 circulo = (int) (pi * (x * y));
                 //CIRCULO
                 System.out.println("El área del circulo es: " + circulo);
+                break;
 
+            //Si el usuario digita otra opción, mostrar siguiente mensaje 
             default:
                 System.out.println("Opción no es válida");
 
