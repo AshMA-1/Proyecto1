@@ -12,27 +12,25 @@ import java.util.Scanner;
  * @author ashle
  */
 public class Problema5 {
-    
-     public static void main(String[] args) {
+
+    static Scanner entrada = new Scanner(System.in);
+
+    public static void main(String[] args) {
         // TODO code application logic here
-        Scanner entrada = new Scanner(System.in);
-        double num=3.0, valor;
-        int valorPI=0;
-        
-        System.out.println("Desea estimar el valor de PI:\n 1) 1\n 2) 0");
 
-        valorPI = entrada.nextInt();
-        
-        
-        switch (valorPI) {
-            case 1:
-                valor = 4-(4/num);
-                //CUADRADO
-                System.out.println("El valor de PI es: " + valor);
-                break;
-             
-         }
-     
-     }
-     }
+        float a = 0;
 
+        System.out.print("Digite la cantidad que desea estimar: ");
+        int cantidadNumeros = entrada.nextInt();
+
+        for (int i = 0; 1 <= cantidadNumeros; i++) {
+            if (i % 2 == 0) {
+                a = a - (4 / ((4) - 1));
+            } else {
+                a = a + (4 / ((i++ * 2) - 1));
+            }
+            System.out.println("PI es el valor estimado de: " + a);
+        }
+
+    }
+}
