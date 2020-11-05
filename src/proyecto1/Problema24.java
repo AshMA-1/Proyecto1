@@ -5,6 +5,7 @@
  */
 package proyecto1;
 
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,16 +19,22 @@ public class Problema24 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int tabla [];
+        int tabla[];
         int mayor;
         int num;
-        
-        num=Integer.parseInt(JOptionPane.showInputDialog("Introduce el total de números"));
-        tabla=new int[num];
-        for(int i=0; i<num; i++)
-        {
-         tabla[i]=Integer.parseInt(JOptionPane.showInputDialog("Introduzca el dígito "+(i+1)));   
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Introduce el total de números");
+        num = entrada.nextInt();
+        tabla = new int[num];
+        for (int i = 0; i < num; i++) {
+      
+            tabla[i] = Integer.parseInt(JOptionPane.showInputDialog("Introduzca el dígito " + (i + 1)));
+            if (num > num) {
+                System.out.println("El numero mayor es :" + tabla[i]);
+            } else {
+                System.out.println("El numero mayor es :" + tabla[i]);
+            }
+
         }
     }
-    
 }
