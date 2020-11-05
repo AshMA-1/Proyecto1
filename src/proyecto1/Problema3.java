@@ -18,64 +18,51 @@ public class Problema3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int numDependientes;
-        double salario;
         Scanner calcular = new Scanner(System.in);
-        double arreglo[] = {0, 1, 2, 3, 4};
-        double a = 0,b = 0,c = 0,d = 0,e = 0;
-        int valor = 0;
-        int ingreso;
-        int resulado;
-        
-        arreglo[0] = 1;
-        arreglo[1] = 0.9;
-        arreglo[2] = 0.7;
-        arreglo[3] = 0.6;
-        arreglo[4] = 0.4;
-        
-        System.out.println("Presione el salario aproximado:\n 1) Salario menor a 200.000\n 2) Salario entre 200.000 y menor a 400.000\n 3) Salario entre 400.000 y menor a 600.000\n 4) Salario entre 600.000 y menor a 800.000\n 5) Salario mayor o igual a 800.000\n");
+
+        double a = 1, b = 0.9, c = 0.7, d = 0.6, e = 0.4;
+        double salario;
+        int ingreso = 0;
+        int rango1, rango2, rango3, rango4, rango5;
+
+        System.out.println("\nDigite cual es su salario aproximado de la siguiente lista: \n 1) Salario menor a 200.000\n 2) Salario entre 200.000 y menor a 400.000\n 3) Salario entre 400.000 y menor a 600.000\n 4) Salario entre 600.000 y menor a 800.000\n 5) Salario mayor o igual a 800.000");
         salario = calcular.nextInt();
-        
-        System.out.println("Ingrese aquí su salario: ");
+
+        System.out.println("\nIndique en cual rango se encuentra : \n 1) rango1\n 2) rango2\n 3) rango3\n 4) rango4\n 5) rango5");
         ingreso = calcular.nextInt();
 
-        switch (valor) {
+        switch (ingreso) {
             case 1:
-                a = salario * arreglo[0];
-                //CUADRADO
-                System.out.println("El Impuesto de Renta a pagar es: " + a);
+                rango1 = (int) (salario * a);
+                System.out.println("\nEl Impuesto de Renta a pagar es: " + rango1);
                 break;
 
             case 2:
-                b = salario * arreglo[1];
-                //TRIANGULO
-                System.out.println("El Impuesto de Renta a pagar es: " + b);
+                rango2 = (int) (salario * b);
+                System.out.println("\nEl Impuesto de Renta a pagar es: " + rango2);
                 break;
 
             case 3:
-                c = salario * arreglo[2];
-                //TRIANGULO
-                System.out.println("El Impuesto de Renta a pagar es: " + c);
+                rango3 = (int) (salario * c);
+                System.out.println("\nEl Impuesto de Renta a pagar es: " + rango3);
                 break;
 
             case 4:
-                d = salario * arreglo[3];
-                //TRIANGULO
-                System.out.println("El Impuesto de Renta a pagar es: " + d);
+                rango4 = (int) (salario * d);
+                System.out.println("\nEl Impuesto de Renta a pagar es: " + rango4);
                 break;
 
             case 5:
-                e = salario * 0.4;
-                //TRIANGULO
-                System.out.println("El Impuesto de Renta a pagar es: " + e);
+                rango5 = (int) (salario * 0.4);
+                System.out.println("\nEl Impuesto de Renta a pagar es: " + rango5);
                 break;
-                
+
+            //Si el usuario digita otra opción, mostrar siguiente mensaje 
+            default:
+                System.out.println("Opción no es válida");
 
         }
-        
+
     }
 
-    
 }
-
-
