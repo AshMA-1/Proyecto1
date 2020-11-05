@@ -18,23 +18,22 @@ public class Problema22 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int n,x;
-        
+        int n, x;
+
         double elementos, numeros = 0;
         Scanner entrada = new Scanner(System.in);
         System.out.println("¿Cuántos dígitos va a ingresar?: ");
-        n=entrada.nextInt();
-   
-        for(int i=1;i<=n;i++)
-        { 
-         System.out.println("Digite el número "+i);
-         x=entrada.nextInt();
-         numeros=numeros+x;                
-        }   
-        elementos=numeros/n;
-        
-         System.out.println("El Promedio es:"+elementos);                               
-    }   
+        n = entrada.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            System.out.println("Digite el número " + i);
+            x = entrada.nextInt();
+            numeros = numeros + x;
+        }
+        elementos = numeros / n;
+
+        System.out.println("El Promedio es:" + elementos);
     }
+}
     
 
