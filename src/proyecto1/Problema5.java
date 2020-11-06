@@ -18,19 +18,22 @@ public class Problema5 {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        float a = 0;
+        double pi = 0.0;
+        int num = 1;
 
         System.out.print("Digite la cantidad que desea estimar: ");
         int cantidadNumeros = entrada.nextInt();
 
-        for (int i = 0; 1 <= cantidadNumeros; i++) {
+        for (int i = 1; i <= cantidadNumeros; i++) {
+            double cantidad = 0.0;
             if (i % 2 == 0) {
-                a = a - (4 / ((4) - 1));
+                cantidad = (double) -4 / num;
             } else {
-                a = a + (4 / ((i++ * 2) - 1));
+                cantidad = (double) 4 / num;
             }
-            System.out.println("PI es el valor estimado de: " + a);
+            num = num + 2;
+            pi = pi + cantidad;
         }
-
+        System.out.println(pi);
     }
 }
