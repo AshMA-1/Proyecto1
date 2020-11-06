@@ -18,19 +18,19 @@ public class Problema23 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int num = 0;
-
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Ingrese el dígito: " + num);
-        num = entrada.nextInt();
 
-        int i;
-        int[] factorial = null;
-        factorial[0] = 1;
-        for (i = 1; i <= num; i++) {
-            factorial[i] = i * factorial[i - 1];
-            System.out.println("El factorial es " + factorial);
+        System.out.println("Ingrese el dígito: ");
+        int num = entrada.nextInt();
+
+        System.out.println("El factorial de " + num + " es: " + factorial(num));
+    }
+
+    public static double factorial(int suma) {
+        double cantidad = 1;
+        for (int i = 2; i <= suma; i++) {
+            cantidad *= i;
         }
-        System.out.println("El factorial es " + factorial);
+        return cantidad;
     }
 }
