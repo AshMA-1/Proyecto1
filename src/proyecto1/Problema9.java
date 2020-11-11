@@ -73,6 +73,6 @@ public class Problema9 {
         Inicializar(Calificaciones, Alumnos, Entrada);
         Promedio = Promedio(Calificaciones);
         Imprimir(Calificaciones, Alumnos, Promedio);
-
+        Mayor(Calificaciones, Alumnos);
     }
 }
