@@ -5,6 +5,9 @@
  */
 package primerparcial;
 
+
+
+
 import java.util.Scanner;
 
 /**
@@ -21,28 +24,33 @@ public class PrimerParcial {
         // TODO code application logic here
         for (int i = 0; i < edad.length; i++) {
 
-            System.out.print("Ingrese el nombre del paciente: ");
+            System.out.print("Nombre del paciente: ");
             sobreNombre[i] = Entrada.next();
-            System.out.print("Ingrese el apellido del paciente: ");
+            System.out.print("Apellidos del paciente: ");
             apellidos[i] = Entrada.next();
-            System.out.print("Ingrese el gènero del paciente: ");
+            System.out.print("Gènero del paciente: ");
             sexo[i] = Entrada.next();
-            System.out.print("Ingrese el tipo de Sangre del paciente: ");
+            System.out.print("Tipo de Sangre del paciente: ");
             tipoSangre[i] = Entrada.next();
-            System.out.print("Ingrese la edad: ");
+            System.out.print("Edad del paciente: ");
             edad[i] = Entrada.nextDouble();
 
+            if (edad.length >= 60) {
+                System.out.println("El paciente es de riego");
+            } else {
+                System.out.println("El paciente puede ser de riego");
+            }
         }
     }
 
     public static double Riesgo(double edad[]) {
-        double num = 0.9, prom;
+        double num = 0.9, prom = 0;
         for (int i = 0; i < edad.length; i++) {
-
+            prom = (edad.length * num);
+            System.out.println("El riego es de: " + prom);
         }
-
-        prom = num * edad.length;
         return prom;
+
     }
 
     public static void main(String[] args) {
@@ -53,9 +61,10 @@ public class PrimerParcial {
         String apellidos[];
         String sexo[];
         String tipoSangre[];
+        double prom[];
         int n;
 
-        System.out.print("Ingrese la cantidad de pacientes: ");
+        System.out.print("\nIngrese la cantidad de pacientes: ");
         n = Entrada.nextInt();
 
         edad = new double[n];
@@ -70,8 +79,12 @@ public class PrimerParcial {
         edad = new double[n];
         tipoSangre = new String[n];
 
+        edad = new double[n];
+        prom = new double[n];
+
         Inicializar(edad, sobreNombre, apellidos, sexo, tipoSangre, Entrada);
         Riesgo(edad);
 
     }
 }
+
