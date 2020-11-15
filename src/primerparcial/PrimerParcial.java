@@ -32,13 +32,14 @@ public class PrimerParcial {
             sexo[i] = Entrada.next();
             System.out.print("Tipo de Sangre del paciente: ");
             tipoSangre[i] = Entrada.next();
-            System.out.print("Edad del paciente: ");
+            System.out.print("Edad del paciente: \n");
             edad[i] = Entrada.nextDouble();
 
             if (edad.length >= 60) {
                 System.out.println("El paciente es de riego");
-            } else {
-                System.out.println("El paciente puede ser de riego");
+            }
+            if (edad.length < 60) {
+                System.out.println("El paciente no puede ser de riego");
             }
         }
     }
@@ -46,8 +47,7 @@ public class PrimerParcial {
     public static double Riesgo(double edad[]) {
         double num = 0.9, prom = 0;
         for (int i = 0; i < edad.length; i++) {
-            prom = (edad.length * num);
-            System.out.println("El riego es de: " + prom);
+            System.out.println("El riego es de: " + (edad.length * num));
         }
         return prom;
 
@@ -87,4 +87,3 @@ public class PrimerParcial {
 
     }
 }
-
