@@ -12,7 +12,11 @@ import java.util.Scanner;
  * @author ashle
  */
 public class Alumno {
+    //propiedades o atributos
+    double[] puntosObtenidos;
+    String[] estudiante;
 
+    //metodos y funcionalidades 
     public void inicializar(double puntosObtenidos[], String estudiante[], Scanner operar) {
         // TODO code application logic here
         for (int i = 0; i < puntosObtenidos.length; i++) {

@@ -10,7 +10,13 @@ package tareapoo;
  * @author ashle
  */
 public class Promedio {
+    //propiedades o atributos
+    double[] prom, suma, calificaciones;
+    String[] estado;
+    
+    
 
+    //metodos y funcionalidades 
     public void caclularPromedio(double calificaciones[]) {
         double prom = 0, suma = 0;
         for (int i = 0; i < calificaciones.length; i++) {
