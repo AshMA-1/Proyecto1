@@ -9,39 +9,52 @@ package tareapoo;
  *
  * @author ashle
  */
+import java.util.Scanner;
+
 public class Promedio {
-    //propiedades o atributos
-    double[] prom, suma, calificaciones;
-    String[] estado;
-    
-    
 
-    //metodos y funcionalidades 
-    public void caclularPromedio(double calificaciones[]) {
-        double prom = 0, suma = 0;
-        for (int i = 0; i < calificaciones.length; i++) {
-            suma += calificaciones[i];
-        }
-        System.out.println("Su promedio es: " + prom);
+    int maxRegistros = 100;
+    Examen[] examenes = new Examen[maxRegistros];
+    int cont = 0;
+
+    public Promedio() {
     }
 
-    public void evaluarEstudiante(String estado) {
-        double prom = 0;
-        if (prom < 3) {
-            estado = "Usted perdió el año";
-        } else {
-            if (prom < 4) {
-                estado = "Usted debe hacer convocatoria";
-            } else {
-                estado = "Usted ganó el nivel";
+    //elimina el ult examen del arreglo
+    public boolean eliminarEx() {
+        boolean resultado = false;
+        if (cont != 0) {
+            examenes[cont - 1] = null;
+            cont--;
+            resultado = true;
+        }
+        return resultado;
+    }
+
+    //agregar un examen al arreglo
+    public boolean agregarEx(Examen ex) {
+        boolean resultado = false;
+        if (cont < maxRegistros) { //el arreglo tiene espacio
+            examenes[cont] = ex;
+            cont++;
+            resultado = true;
+        }
+        return resultado;
+    }
+
+    //mostrar examenes
+    public void mostrarExamenes() {
+        for (int i = 0; i < cont; i++) {
+            if (examenes[i] != null) {
+                System.out.println(examenes[i].toString());
             }
-            System.out.println(estado);
         }
-
     }
 
-    public void mostrarMensaje(double prom) {
-        System.out.println("Su promedio es: " + prom);
-    }
+    //calcular promedio
+    public float promedioNotas() {
+        float retorno = 0f;
 
+        return retorno;
+    }
 }
