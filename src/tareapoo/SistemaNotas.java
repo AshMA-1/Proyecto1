@@ -11,13 +11,13 @@ package tareapoo;
  */
 import java.util.Scanner;
 
-public class Promedio {
+public class SistemaNotas  {
 
     int maxRegistros = 100;
     Examen[] examenes = new Examen[maxRegistros];
     int cont = 0;
 
-    public Promedio() {
+    public SistemaNotas () {
     }
 
     //elimina el ult examen del arreglo
@@ -32,6 +32,23 @@ public class Promedio {
     }
 
     //agregar un examen al arreglo
+    public void imprimirDatosAlumno(Alumno alum) {
+        Scanner insertado = new Scanner(System.in);
+
+        int press = 0;
+        String nombreCompleto = null, carnets = null, ningunDato = null;
+        System.out.println("Seleccione la opción para mostrar la información que desea: \n1) nombreCompleto \n2) Carnets \n3) ningunDato ");
+        press = insertado.nextInt();
+
+        if (press == 1) {
+            System.out.println(alum);
+        } else if (press == 2) {
+            System.out.println(" " + alum);
+        }
+        System.out.println("No desea ninguna información " + ningunDato);
+
+    }
+    
     public boolean agregarEx(Examen ex) {
         boolean resultado = false;
         if (cont < maxRegistros) { //el arreglo tiene espacio

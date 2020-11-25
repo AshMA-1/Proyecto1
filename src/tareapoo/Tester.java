@@ -11,7 +11,7 @@ public class Tester {
 
     public static void main(String args[]) {
 
-        Promedio sistema = new Promedio();
+        SistemaNotas  sistema = new SistemaNotas ();
         Scanner s = new Scanner(System.in);
 
         while (true) {
