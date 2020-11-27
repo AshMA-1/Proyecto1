@@ -16,6 +16,12 @@ public class SistemaNotas  {
     int maxRegistros = 100;
     Examen[] examenes = new Examen[maxRegistros];
     int cont = 0;
+    
+    int imprimirDatosAlumnos;
+    Alumno[] datos = new Alumno[imprimirDatosAlumnos];
+    
+    int information;
+    Informacion[] info = new Informacion[information];
 
     public SistemaNotas () {
     }
@@ -30,8 +36,12 @@ public class SistemaNotas  {
         }
         return resultado;
     }
+    
+    public void otraInformacion(Informacion infor){
+        System.out.println(""+information);
+    }
 
-    //agregar un examen al arreglo
+    //imprimir datos del alumno
     public void imprimirDatosAlumno(Alumno alum) {
         Scanner insertado = new Scanner(System.in);
 
@@ -48,7 +58,7 @@ public class SistemaNotas  {
         System.out.println("No desea ninguna información " + ningunDato);
 
     }
-    
+    //agregar un examen al arreglo
     public boolean agregarEx(Examen ex) {
         boolean resultado = false;
         if (cont < maxRegistros) { //el arreglo tiene espacio
