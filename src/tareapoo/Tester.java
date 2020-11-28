@@ -11,7 +11,7 @@ public class Tester {
 
     public static void main(String args[]) {
 
-        SistemaNotas  sistema = new SistemaNotas ();
+        SistemaNotas sistema = new SistemaNotas();
         Scanner s = new Scanner(System.in);
 
         while (true) {
