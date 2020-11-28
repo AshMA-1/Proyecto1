@@ -14,6 +14,7 @@ import java.util.Scanner;
 
 public class Alumno {
 
+    PadreFamiliar padres;
     String nombre;
     String apellido;
     int carne;
@@ -21,14 +22,25 @@ public class Alumno {
     public Alumno() {
     }
 
-    public Alumno(String nombre, String apellido, int carne) {
+    public Alumno(PadreFamiliar padres, String nombre, String apellido, int carne) {
+        this.padres = padres;
         this.nombre = nombre;
         this.apellido = apellido;
         this.carne = carne;
     }
 
+    public PadreFamiliar padres() {
+        System.out.println(padres);
+        return null;
+
+    }
+
     public void mostrardatos() {
         System.out.println(nombre + " " + apellido + " " + carne);
+    }
+
+    public PadreFamiliar getPadres() {
+        return padres;
     }
 
     //metodos gets y sets
@@ -36,20 +48,24 @@ public class Alumno {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
     public int getCarne() {
         return carne;
+    }
+
+    public void setPadres(PadreFamiliar padres) {
+        this.padres = padres;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public void setCarne(int carne) {

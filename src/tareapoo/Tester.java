@@ -32,7 +32,7 @@ public class Tester {
             System.out.println("Digite el carne:");
             int z = s.nextInt();
 
-            Alumno alum = new Alumno(x, y, z);
+            Alumno alum = new Alumno();
 
             System.out.println("Digite la nota obtenida:");
             int nota = s.nextInt();
@@ -43,6 +43,14 @@ public class Tester {
 
             Examen e = new Examen(alum, nota, puntosTotales,
                     puntosObtenidos, null);
+
+            PadreFamiliar padres = new PadreFamiliar();
+            System.out.println("Digite el género:");
+            String genero = s.next();
+            System.out.println("Digite su nombre completo:");
+            String nombreFamiliar = s.next();
+            System.out.println("Digite su edad");
+            String edad = s.next();
 
             sistema.agregarEx(e);
 
