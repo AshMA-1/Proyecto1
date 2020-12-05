@@ -55,6 +55,7 @@ public class Tester {
             sistema.agregarEx(e);
 
             sistema.mostrarExamenes();
+
         }
 
     }

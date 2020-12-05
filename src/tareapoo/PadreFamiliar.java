@@ -9,12 +9,14 @@ package tareapoo;
  *
  * @author ashle
  */
+import java.util.Scanner;
+
 public class PadreFamiliar {
 
     String genero;
     String nombreFamiliar;
     String parentezco;
-    int edad;
+    int edad, press;
 
     public PadreFamiliar() {
 
@@ -25,6 +27,27 @@ public class PadreFamiliar {
         this.nombreFamiliar = nombreFamiliar;
         this.parentezco = parentezco;
         this.edad = edad;
+        this.press = press;
+    }
+
+    public void ImprimirDatosFamiliar(int press) {
+        //permite que usuario digite 
+        Scanner insertado = new Scanner(System.in);
+        int si, no;
+        System.out.println("Qué opción desea hacer:\n 1) Si\n 2) No\n");
+        press = insertado.nextInt();
+
+        //creacion de switch y formulas con cada operacion +, -, *, / para que muestre unicamente lo que el cliente desea
+        switch (press) {
+            case 1:
+                System.out.println("El resultado de la suma es: " + press);
+                break;
+
+            case 2:
+                System.out.println("El resultado de la resta es: " + press);
+                break;
+
+        }
     }
 
     @Override
