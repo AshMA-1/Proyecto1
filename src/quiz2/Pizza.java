@@ -5,12 +5,13 @@
  */
 package quiz2;
 
+
 /**
  *
  * @author ashle
  */
 public class Pizza {
-    
+
     String peperoni;
     String suprema;
     String jamonQueso;
@@ -25,6 +26,12 @@ public class Pizza {
         this.monto = monto;
         this.peperoni = peperoni;
         this.suprema = suprema;
+    }
+
+    public float calcular() {
+        float monto = 0;
+        return 0;
+
     }
 
     @Override
