@@ -3,16 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package reporte;
+package pooproblema5;
 
 /**
  *
  * @author ashle
  */
-public class Tester {
+public class PooProblema5 {
 
-    public static void main(String args[]) {
-        Reporte report = new Reporte();
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
     }
-
+    
 }
