@@ -5,6 +5,8 @@
  */
 package pooproblema4;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ashle
@@ -12,6 +14,7 @@ package pooproblema4;
 public class Tester {
 
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
 
         int[] numeros = {1, 4, 8, 45, 200};
         int inicio = 0;
@@ -30,6 +33,7 @@ public class Tester {
         } else {
             fin = posicion - 1;
         }
+        System.out.println("Elija un número" + s);
         System.out.println("El numero" + buscadorNum + "fue encontrado en \nnumeros[" + resultado);
 
     }

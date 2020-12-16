@@ -30,6 +30,14 @@ public class BusquedaBinaria {
         this.resultado = resultado;
     }
 
+    public float buscador(int inicio, int fin, int buscadorNum, int posicion, int resultado, int numeros) {
+
+        System.out.println("El numero" + buscadorNum + "fue encontrado en \nnumeros[" + resultado);
+        int s = 0;
+        System.out.println("Elija un número" + s);
+        return 0;
+
+    }
 
     @Override
     public String toString() {
