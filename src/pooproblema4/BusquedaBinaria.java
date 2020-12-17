@@ -5,6 +5,8 @@
  */
 package pooproblema4;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ashle
@@ -31,10 +33,11 @@ public class BusquedaBinaria {
     }
 
     public float buscador(int inicio, int fin, int buscadorNum, int posicion, int resultado, int numeros) {
-
+        Scanner entrada = new Scanner(System.in);
+        int s;
         System.out.println("El numero" + buscadorNum + "fue encontrado en \nnumeros[" + resultado);
-        int s = 0;
-        System.out.println("Elija un número" + s);
+        System.out.println("Elija un número");
+        entrada.next();
         return 0;
 
     }

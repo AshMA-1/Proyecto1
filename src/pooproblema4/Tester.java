@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Tester {
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        Scanner insertar = new Scanner(System.in);
 
         int[] numeros = {1, 4, 8, 45, 200};
         int inicio = 0;
@@ -23,6 +23,10 @@ public class Tester {
         int posicion = 0;
         int resultado = 0;
 
+        System.out.println("Elija un número incial " + inicio);
+        insertar.next();
+        System.out.println("Elija un número final " + fin);
+        insertar.next();
         while (inicio <= fin) {
             posicion = (inicio + fin) / 2;
         }
@@ -33,7 +37,6 @@ public class Tester {
         } else {
             fin = posicion - 1;
         }
-        System.out.println("Elija un número" + s);
         System.out.println("El numero" + buscadorNum + "fue encontrado en \nnumeros[" + resultado);
 
     }

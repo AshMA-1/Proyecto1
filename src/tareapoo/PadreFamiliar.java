@@ -34,17 +34,22 @@ public class PadreFamiliar {
         //permite que usuario digite 
         Scanner insertado = new Scanner(System.in);
         int si, no;
-        System.out.println("Qué opción desea hacer:\n 1) Si\n 2) No\n");
+        System.out.println("Desea mostrar la informació:\n 1) Si\n 2) No\n");
         press = insertado.nextInt();
 
-        //creacion de switch y formulas con cada operacion +, -, *, / para que muestre unicamente lo que el cliente desea
+        //creacion de switch y formulas con cada operacion para que muestre unicamente lo que el cliente desea
         switch (press) {
             case 1:
-                System.out.println("El resultado de la suma es: " + press);
+                System.out.println("La informaición : " + press);
+                System.out.println("El género : " + genero);
+                System.out.println("El nombre : " + nombreFamiliar);
+                System.out.println("El parentezco : " + parentezco);
+                System.out.println("La edad : " + edad);
                 break;
 
             case 2:
                 System.out.println("El resultado de la resta es: " + press);
+                System.out.println("No desea ninguna infomración" + press);
                 break;
 
         }
