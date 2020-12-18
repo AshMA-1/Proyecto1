@@ -2,10 +2,24 @@ package pooproblema5;
 
 import java.util.Scanner;
 
-public class Vector1 {
+public class Vector {
 
     private Scanner insertar;
     private int[] vectores;
+
+    public Vector() {
+
+    }
+
+    public Vector(Scanner insertar, int[] vectores) {
+        this.insertar = insertar;
+        this.vectores = vectores;
+    }
+
+    @Override
+    public String toString() {
+        return "Vector1{" + "insertar=" + insertar + ", vectores=" + vectores + '}';
+    }
 
     public void cargar() {
         insertar = new Scanner(System.in);
@@ -34,6 +48,22 @@ public class Vector1 {
         for (int num = 0; num < vectores.length; num++) {
             System.out.println(vectores[num]);
         }
+    }
+
+    public Scanner getInsertar() {
+        return insertar;
+    }
+
+    public int[] getVectores() {
+        return vectores;
+    }
+
+    public void setInsertar(Scanner insertar) {
+        this.insertar = insertar;
+    }
+
+    public void setVectores(int[] vectores) {
+        this.vectores = vectores;
     }
 
 }

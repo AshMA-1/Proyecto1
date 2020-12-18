@@ -17,19 +17,10 @@ public class Tester {
         Scanner insertar;
         int[] vectores;
 
-        Vector1 vp = new Vector1();
+        Vector vp = new Vector();
         vp.cargar();
         vp.ordenar();
         vp.imprimir();
-
-        Vector1 vc = new Vector1();
-        vc.cargar();
-
-        Vector2 vo = new Vector2();
-        vo.ordenar();
-
-        Vector3 vi = new Vector3();
-        vi.imprimir();
 
     }
 }

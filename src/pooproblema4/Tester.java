@@ -13,32 +13,40 @@ import java.util.Scanner;
  */
 public class Tester {
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         Scanner insertar = new Scanner(System.in);
+        System.out.println("Digite la cantidad de elementos");
+        int tam = insertar.nextInt();
 
-        int[] numeros = {1, 4, 8, 45, 200};
-        int inicio = 0;
-        int fin = numeros.length - 1;
-        int buscadorNum = 200;
-        int posicion = 0;
-        int resultado = 0;
+        int[] arreglo = new int[tam];
+        //insertar elementos de arreglo
+        for (int i = 0; i < arreglo.length; i++) {
+            System.out.println("Digite posición del número " + i + " del arreglo");
+            arreglo[i] = insertar.nextInt();
 
-        System.out.println("Elija un número incial " + inicio);
-        insertar.next();
-        System.out.println("Elija un número final " + fin);
-        insertar.next();
-        while (inicio <= fin) {
-            posicion = (inicio + fin) / 2;
         }
-        if (numeros[posicion] == buscadorNum) {
-            resultado = posicion;
-        } else if (numeros[posicion] < buscadorNum) {
-            inicio = posicion + 1;
-        } else {
-            fin = posicion - 1;
+
+        int numBuscado = tam;
+        int inferior = 0;
+        int centro;
+        int superior = tam - 1;
+
+        while (inferior <= superior) {
+            centro = (superior + inferior) / 2;
+            if (arreglo[centro] == numBuscado) {
+                System.out.println("Numero está en la posición: " + centro);
+
+            } else if (numBuscado < arreglo[centro]) {
+                superior = centro - 1;
+            } else {
+                inferior = centro + 1;
+            }
+
         }
-        System.out.println("El numero" + buscadorNum + "fue encontrado en \nnumeros[" + resultado);
+        BusquedaBinaria bb = new BusquedaBinaria();
+        bb.Mostrar();
+        bb.Secuencia();
 
     }
-    //return 0;
+
 }
