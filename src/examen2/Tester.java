@@ -19,12 +19,16 @@ public class Tester {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
-        EquipoSonido es = new EquipoSonido();
-        es.insertarMusica();
-        es.ordenar();
-        
         Radio r = new Radio();
         r.funcionalidad();
+
+        EquipoSonido es = new EquipoSonido();
+        es.insertarMusica();
+        es.nivelVolumen();
+        es.ordenar();
+
+        Reloj re = new Reloj();
+
     }
 
 }
