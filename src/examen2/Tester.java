@@ -22,6 +22,9 @@ public class Tester {
         EquipoSonido es = new EquipoSonido();
         es.insertarMusica();
         es.ordenar();
+        
+        Radio r = new Radio();
+        r.funcionalidad();
     }
 
 }

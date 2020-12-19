@@ -19,7 +19,7 @@ public class EquipoSonido {
     int parlanteDer;
     int parlanteSub;
     String[] volumen = new String[10];
-    String[] lista= new String[1000];
+    String[] lista = new String[1000];
     int musica = 0;
     int cantidad = 0;
 
@@ -48,18 +48,18 @@ public class EquipoSonido {
             if (cantidad == cantidad) {
                 System.out.println("Ingrese el código binario de la música ");
                 musica = entrada.nextInt();
+                System.out.println("El código binario de la música es: " + musica + " \n");
             }
 
         }
-        System.out.println("El código binario de la música es: " + musica + " \n");
         System.out.println("El total de códigos musicales es : " + cantidad);
     }
 
     public void ordenar() {
-        String[] listaAudios = new String[1000];
+        String[] cantidad = new String[1000];
         for (int i = 0; i < 1000; i++) { //para cada espacio del arreglo
-            if (listaAudios[i].equals("") == false) { //Si no está vacío el audio en posición i
-                System.out.println(listaAudios[i]); //imprime el audio en posición i
+            if (cantidad[i].equals(""+musica)) { //Si no está vacío el audio en posición i
+                System.out.println(cantidad[i]); //imprime el audio en posición i
             }
         }
     }
