@@ -6,6 +6,7 @@
 package examen2;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,7 +19,9 @@ public class Tester {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
         Scanner entrada = new Scanner(System.in);
+
         Radio r = new Radio();
         r.funcionalidad();
 

@@ -50,7 +50,7 @@ public class EquipoSonido {
                 musica = entrada.nextInt();
             }
         }
-        System.out.println("\nLos códigos binarios son: " + musica++);
+        System.out.println("\nLos códigos binarios son: " + musica + 1);
         System.out.println("El total de códigos musicales es : " + cantidad + "\n");
     }
 
