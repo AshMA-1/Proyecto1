@@ -11,17 +11,20 @@ import java.util.Scanner;
  *
  * @author ashle
  */
-public class Tester {
+public class Radio {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    int apagar = 0;
+    int encender = 1;
+    int press;
+
+    public void funcionalidad() {
         Scanner entrada = new Scanner(System.in);
-        EquipoSonido es = new EquipoSonido();
-        es.insertarMusica();
-        es.ordenar();
+        System.out.println("Digite la cantidad de música que desea agregar: ");
+        press = entrada.nextInt();
+        
+        switch(press){
+            case:1
+        }
     }
 
 }
