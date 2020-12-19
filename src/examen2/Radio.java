@@ -32,16 +32,16 @@ public class Radio {
 
     public void funcionalidad() {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Digite la opción que desea hacer \n0)apagar \n1)encender ");
+        System.out.println("¿Qué desea hacer en la radio? Elija una opción: \n0)apagar \n1)encender ");
         press = entrada.nextInt();
 
         switch (press) {
             case 0:
-                System.out.println("El radio se va a apagar " + apagar);
+                System.out.println("Apagar Radio");
                 break;
 
             case 1:
-                System.out.println("El radio se va a encender " + encender);
+                System.out.println("Encender Radio\n");
                 break;
         }
     }

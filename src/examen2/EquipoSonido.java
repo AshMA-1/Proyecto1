@@ -46,20 +46,36 @@ public class EquipoSonido {
         cantidad = entrada.nextInt();
         for (int i = 0; i < cantidad; i++) {
             if (cantidad == cantidad) {
-                System.out.println("Ingrese el código binario de la música ");
+                System.out.println("Ingrese el código binario de la música: ");
                 musica = entrada.nextInt();
-                System.out.println("El código binario de la música es: " + musica + " \n");
             }
-
         }
-        System.out.println("El total de códigos musicales es : " + cantidad);
+        System.out.println("\nLos códigos binarios son: " + musica++);
+        System.out.println("El total de códigos musicales es : " + cantidad + "\n");
+    }
+
+    public void nivelVolumen() {
+        Random obt = new Random();
+        int volumen;
+
+        for (int i = 0; i < 1; i++) {
+            volumen = obt.nextInt(10);
+            System.out.println("Parlante izquierdo tiene un volumen de : " + volumen);
+            volumen = obt.nextInt(10);
+            System.out.println("Parlante subwoofer tiene un volumen de : " + volumen);
+            volumen = obt.nextInt(10);
+            System.out.println("Parlante derechi tiene un volumen de : " + volumen);
+        }
     }
 
     public void ordenar() {
-        String[] cantidad = new String[1000];
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite la cantidad de música que desea agregar: ");
+        cantidad = entrada.nextInt();
+        String[] cantidad = new String[musica];
         for (int i = 0; i < 1000; i++) { //para cada espacio del arreglo
-            if (cantidad[i].equals(""+musica)) { //Si no está vacío el audio en posición i
-                System.out.println(cantidad[i]); //imprime el audio en posición i
+            if (cantidad[i].equals("" + musica)) { //Si no está vacío el audio en posición i
+                System.out.println(cantidad[musica]); //imprime el audio en posición i
             }
         }
     }
