@@ -14,24 +14,26 @@ import javax.swing.JOptionPane;
  */
 public class Tester {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String a[]) {
+
+        EquipoSonidoControlador controlador = new EquipoSonidoControlador();
+        controlador.iniciar();
 
         Scanner entrada = new Scanner(System.in);
 
         Radio r = new Radio();
         r.funcionalidad();
 
-        EquipoSonido es = new EquipoSonido();
+        Vista es = new Vista();
         es.insertarMusica();
         es.nivelVolumen();
         es.ordenar();
 
-        Reloj re = new Reloj();
+        Parlante p = new Parlante();
+        p.parlantes(0, true);
 
+        Reloj re = new Reloj();
     }
 
 }
+

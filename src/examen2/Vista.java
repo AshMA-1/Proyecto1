@@ -12,46 +12,65 @@ import java.util.Scanner;
  *
  * @author ashle
  */
-public class EquipoSonido {
+public class Vista {
 
     //atributos
     int parlanteIzq;
     int parlanteDer;
     int parlanteSub;
     String[] volumen = new String[10];
-    String[] lista = new String[1000];
-    int musica = 0;
+    int[] listaAudios = new int[1000];
+    int musica;
     int cantidad = 0;
+    int cont;
 
-    public EquipoSonido() {
+    public Vista() {
 
     }
 
-    public EquipoSonido(int parlanteIzq, int parlanteDer, int parlanteSub) {
+    public Vista(int parlanteIzq, int parlanteDer, int parlanteSub, int musica, int cont) {
         this.parlanteIzq = parlanteIzq;
         this.parlanteDer = parlanteDer;
         this.parlanteSub = parlanteSub;
+        this.musica = musica;
+        this.cont = cont;
     }
 
     @Override
     public String toString() {
-        return "EquipoSonido{" + "parlanteIzq=" + parlanteIzq + ", parlanteDer=" + parlanteDer + ", parlanteSub=" + parlanteSub + ", volumen=" + volumen + ", lista=" + lista + ", musica=" + musica + ", cantidad=" + cantidad + '}';
+        return "EquipoSonido{" + "parlanteIzq=" + parlanteIzq + ", parlanteDer=" + parlanteDer + ", parlanteSub=" + parlanteSub + ", volumen=" + volumen + ", listaAudios=" + listaAudios + ", musica=" + musica + ", cantidad=" + cantidad + '}';
+    }
+
+    public void iniciar() {
+
     }
 
     //metodos y funcionanlidades 
     public void insertarMusica() {
-        String[] lista = new String[1000];
         Scanner entrada = new Scanner(System.in);
         System.out.println("Digite la cantidad de música que desea agregar: ");
         cantidad = entrada.nextInt();
         for (int i = 0; i < cantidad; i++) {
             if (cantidad == cantidad) {
                 System.out.println("Ingrese el código binario de la música: ");
-                musica = entrada.nextInt();
+                listaAudios[i] = entrada.nextInt();
             }
         }
         System.out.println("\nLos códigos binarios son: " + musica + 1);
         System.out.println("El total de códigos musicales es : " + cantidad + "\n");
+    }
+
+    public boolean eliminarLista(int parlanteIzq, int parlanteDer, int parlanteSu) {
+        int insertarMusica = 100;
+        Vista[] musica = new Vista[insertarMusica];
+        int cont = 0;
+        boolean resultado = true;
+        if (cont != 0) {
+            musica[cont - 1] = null;
+            cont--;
+            resultado = true;
+        }
+        return resultado;
     }
 
     public void nivelVolumen() {
@@ -64,18 +83,15 @@ public class EquipoSonido {
             volumen = obt.nextInt(10);
             System.out.println("Parlante subwoofer tiene un volumen de : " + volumen);
             volumen = obt.nextInt(10);
-            System.out.println("Parlante derechi tiene un volumen de : " + volumen);
+            System.out.println("Parlante derecho tiene un volumen de : " + volumen);
         }
     }
 
     public void ordenar() {
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Digite la cantidad de música que desea agregar: ");
-        cantidad = entrada.nextInt();
-        String[] cantidad = new String[musica];
         for (int i = 0; i < 1000; i++) { //para cada espacio del arreglo
-            if (cantidad[i].equals("" + musica)) { //Si no está vacío el audio en posición i
-                System.out.println(cantidad[musica]); //imprime el audio en posición i
+            if (listaAudios[i] == 999) { //Si no está vacío el audio en posición i
+                System.out.println(listaAudios[i]); //imprime el audio en posición i
+
             }
         }
     }
@@ -96,8 +112,8 @@ public class EquipoSonido {
         return volumen;
     }
 
-    public String[] getLista() {
-        return lista;
+    public int[] getListaAudios() {
+        return listaAudios;
     }
 
     public int getMusica() {
@@ -124,8 +140,8 @@ public class EquipoSonido {
         this.volumen = volumen;
     }
 
-    public void setLista(String[] lista) {
-        this.lista = lista;
+    public void setListaAudios(int[] listaAudios) {
+        this.listaAudios = listaAudios;
     }
 
     public void setMusica(int musica) {
